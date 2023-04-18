@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/ISS_Position/static/css/main.02d07b7e.css",
-    "main.js": "/ISS_Position/static/js/main.7ab33726.js",
+    "main.css": "/ISS_Position/static/css/main.34344298.css",
+    "main.js": "/ISS_Position/static/js/main.85c9ae45.js",
     "index.html": "/ISS_Position/index.html",
-    "main.02d07b7e.css.map": "/ISS_Position/static/css/main.02d07b7e.css.map",
-    "main.7ab33726.js.map": "/ISS_Position/static/js/main.7ab33726.js.map"
+    "main.34344298.css.map": "/ISS_Position/static/css/main.34344298.css.map",
+    "main.85c9ae45.js.map": "/ISS_Position/static/js/main.85c9ae45.js.map"
   },
   "entrypoints": [
-    "static/css/main.02d07b7e.css",
-    "static/js/main.7ab33726.js"
+    "static/css/main.34344298.css",
+    "static/js/main.85c9ae45.js"
   ]
 }
