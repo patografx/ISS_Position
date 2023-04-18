@@ -25,7 +25,7 @@ const Map = ({ latitude, longitude, altitude, timestamp, position }) => {
         <div>
 
             <div class="flex vh-100">
-                <div class="flex-0 flex-grow-0 w-30 pa3 flex flex-column justify-center relative">
+                <div class="flex-0 flex-grow-0 w-30 pa3 flex flex-column justify-center relative mainData">
                     <div className="flex pa3 tl mainTitle">
                         <button
                             className="pa3 br3 pointer b--none outline-0 flex justify-center items-center mapButton"
@@ -49,7 +49,7 @@ const Map = ({ latitude, longitude, altitude, timestamp, position }) => {
                         <a className="no-underline link white" href="https://icons8.com/icon/uRvqauJrCCGj/iss" target="blank">icons by Icons8</a>
                     </div>
                 </div>
-                <div className="flex justify-center flex-grow-0 flex-shrink-0 w-70-l w-100 pa3 relative overflow-hidden">
+                <div className="flex justify-center flex-grow-0 flex-shrink-0 w-70-l w-100 pa3 relative overflow-hidden mainContent">
 
                     {!position ? (
                         <div className="flex items-center">

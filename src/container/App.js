@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.fetchISSData = throttle(this.fetchISSData, 2000); // Throttle
+    this.fetchISSData = throttle(this.fetchISSData, 3000); // Throttle
     this.fetchISSData();
   }
 
