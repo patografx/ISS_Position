@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component} from "react";
 import Map from "../component/Map";
 import { throttle } from 'lodash';
 import 'tachyons';
