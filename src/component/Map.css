@@ -184,10 +184,10 @@ h3 {
   }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 415px) {
 
   h3 {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .mapButton {
