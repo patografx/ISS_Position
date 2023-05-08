@@ -25,9 +25,33 @@ h3 {
 
 
 /*Desktop*/
-.mainData {
-  /* Other styles */
+#mainData {
+  width: 20%;
   transition: width 0.3s ease;
+}
+
+#mainData.hidden{
+ width: 0;
+}
+
+#hideButton {
+  top: 50%;
+  position: absolute;
+  background-color: #030b14;
+  color: #ffffff;
+  font-size: 15px;
+  transition: left 0.3s ease;
+  left: 20%;
+}
+
+#hideButton.hidden {
+  top: 50%;
+  position: absolute;
+  background-color: #030b14;
+  color: #ffffff;
+  font-size: 15px;
+  transition: left 0.3s ease;
+  left: 0;
 }
 
 .mapButton {
@@ -59,18 +83,22 @@ h3 {
   /* Adjust the scale factor as needed */
 }
 
-.hideButton {
-  background-color: #030b14;
-  color: #ffffff;
-  font-size: 15px;
-  transition: left 0.3s ease;
-}
+
 
 /* Mobile */
 @media (max-width: 590px) {
   .mapButton {
     width: 35px;
   }
+
+  #mainData {
+    width: 40%;
+  }
+
+  #hideButton {
+    left: 40%;
+  }
+
 }
 
 
@@ -105,6 +133,7 @@ h3 {
   h3 {
     font-size: 1.2rem;
   }
+
   .mapButton {
     width: 50px;
   }
@@ -129,55 +158,54 @@ h3 {
 }
 
 @media (max-width: 690px) {
-  h1 {
-    font-size: 1.5rem;
-  }
 
-  h2 {
-    font-size: 1.2rem;
-  }
 
   h3 {
     font-size: 0.8rem;
   }
+
   .mapButton {
     width: 35px;
   }
 }
 
 @media (max-width: 590px) {
-  h1 {
-    font-size: 1.2rem;
-  }
-
-  h2 {
-    font-size: 0.9rem;
-  }
 
   h3 {
-    font-size: 0.6rem;
+    font-size: 1rem;
   }
 
   .mapButton {
     width: 30px;
   }
+
+  #icon8{
+    font-size: .7rem;
+  }
 }
 
-@media (max-width: 470px) {
-  h1 {
-    font-size: 1rem;
-  }
-
-  h2 {
-    font-size: 0.8rem;
-  }
+@media (max-width: 370px) {
 
   h3 {
-    font-size: 0.5rem;
+    font-size: 0.9rem;
   }
 
   .mapButton {
     width: 25px;
-    padding: 9%;
+  }
+}
+
+@media (max-width: 300px) {
+
+  #mainData {
+    width: 50%;
+  }
+
+  #hideButton {
+    left: 50%;
+  }
+
+  h3 {
+    font-size: 0.9rem;
   }
 }

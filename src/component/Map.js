@@ -18,17 +18,24 @@ const Map = ({ latitude, longitude, altitude, timestamp, position }) => {
         popupAnchor: [0, -41]
     });
 
-
     const [isExpanded, setIsExpanded] = useState(true);
 
-    function handleButtonClick() {
-        setIsExpanded(!isExpanded);
-    }
+
+    function toggleExpanded() {
+        const mainDataElement = document.getElementById("mainData");
+        const hideButtonElement = document.getElementById("hideButton");
+        if (mainDataElement && hideButtonElement) {
+          mainDataElement.classList.toggle("hidden");
+          hideButtonElement.classList.toggle("hidden");
+          setIsExpanded(!isExpanded);
+        }
+      }
+      
 
     return (
         <div>
             <div className="flex vh-100">
-                <div className="mainData absolute h-100 flex flex-wrap flex-column justify-center bg-black z-999 overflow-hidden" style={{ width: isExpanded ? '20%' : '0' }}>
+                <div id="mainData" className="absolute h-100 flex flex-wrap flex-column justify-center bg-black z-999 overflow-hidden">
                     <div className="pa3 pt0 tl">
                         <h1 className="">ISS Position</h1>
                         <h2 className="fw1">Get real time data of the International Space Station</h2>
@@ -45,11 +52,11 @@ const Map = ({ latitude, longitude, altitude, timestamp, position }) => {
                         </div>
                     </div>
                     <div className="pa3 justify-between items-end flex-wrap absolute bottom-0">
-                        <a className="no-underline link white" href="https://icons8.com/icon/uRvqauJrCCGj/iss" target="blank">icons by Icons8</a>
+                        <a id="icon8" className="no-underline link white" href="https://icons8.com/icon/uRvqauJrCCGj/iss" target="blank">icons by Icons8</a>
                     </div>
                 </div>
-                <div className="hideButton flex items-center" style={{ top: '50%', left: isExpanded ? '20%' : '0', position: 'absolute' }}>
-                    <button className="hideButton pa2 pointer b--none outline-0 z-9999" onClick={handleButtonClick}>
+                <div className="hideButton flex items-center">
+                <button id="hideButton" className="pa2 pointer b--none outline-0 z-9999" onClick={toggleExpanded}>
                         {isExpanded ? "<" : ">"}
                     </button>
                 </div>
@@ -61,7 +68,7 @@ const Map = ({ latitude, longitude, altitude, timestamp, position }) => {
                             </div>
                         ) : (
                             <div className="leafletMap absolute bottom-0 top-0 left-0 right-0">
-                                {position ? (                                    
+                                {position ? (
                                     <MapContainer center={position} zoom={3} scrollWheelZoom={true} style={{ height: '100%', width: '100%' }}>
 
                                         <TileLayer
